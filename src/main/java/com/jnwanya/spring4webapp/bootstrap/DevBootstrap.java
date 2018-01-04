@@ -4,6 +4,7 @@ import com.jnwanya.spring4webapp.model.Author;
 import com.jnwanya.spring4webapp.model.Book;
 import com.jnwanya.spring4webapp.repositories.AuthorRepository;
 import com.jnwanya.spring4webapp.repositories.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -30,7 +31,7 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
     }
 
     private void initData(){
-        Author eric = new Author("Eric", "Cantona");
+        Author eric = new Author("Justin", "Nwanya");
         Book ericBook = new Book("Java for Dummies", "1234", "HarperCollection");
         eric.getBooks().add(ericBook);
         ericBook.getAuthors().add(eric);
